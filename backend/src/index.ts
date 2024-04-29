@@ -33,7 +33,7 @@ app.post("/forgot-password", (req, res) => {
     });
   } else {
     return res.status(400).json({
-      msg: "Invalid OTP.",
+      msg: "Invalid OTP",
     });
   }
 });
