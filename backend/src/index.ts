@@ -11,7 +11,7 @@ app.post("/generate-otp", (req, res) => {
       msg: "Invalid Email.",
     });
   }
-  const otp = Math.floor(100000 + Math.random() * 900000).toString();
+  const otp = Math.floor(10000 + Math.random() * 90000).toString();
   console.log("OTP Generated is : " + otp);
   otpStore[email] = otp;
   return res.status(200).json({
@@ -23,7 +23,7 @@ app.post("/forgot-password", (req, res) => {
   const { email, otp, newPassword } = req.body;
   if (!email || !otp || !newPassword) {
     return res.status(400).json({
-      msg: "Invalid credentials or OTP.",
+      msg: "Invalid credentials.",
     });
   }
   if (otp === otpStore[email]) {
