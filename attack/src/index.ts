@@ -30,9 +30,9 @@ async function sendRequest(otp: number) {
 
   try {
     await axios.request(config);
-    console.log("done for " + otp);
+    console.log("Worked for: " + otp);
   } catch (e) {
-    console.log("not worked for " + otp);
+    console.log("Not worked for: " + otp);
   }
 }
 
