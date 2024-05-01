@@ -39,7 +39,7 @@ async function sendRequest(otp: number) {
 async function main() {
   for (let i = 0; i < 100000; i += 100) {
     const promises = [];
-    console.log("here for: " + i);
+    console.log("Here for: " + i);
     for (let j = 0; j < 100; j++) {
       promises.push(sendRequest(i + j));
     }
