@@ -2,7 +2,7 @@ import axios from "axios";
 
 async function sendRequest(otp: number) {
   let data = JSON.stringify({
-    email: "harkirat@gmail.com",
+    email: "abxyz@gmail.com",
     otp: otp,
     newPassword: "NewPassword-" + otp,
   });
