@@ -11,7 +11,7 @@ app.post("/generate-otp", (req, res) => {
       msg: "Invalid Email.",
     });
   }
-  const otp = Math.floor(10000 + Math.random() * 90000).toString();
+  const otp = Math.floor(1000 + Math.random() * 9000).toString();
   console.log("OTP Generated is : " + otp);
   otpStore[email] = otp;
   return res.status(200).json({
