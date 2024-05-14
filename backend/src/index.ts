@@ -27,6 +27,8 @@ app.post("/forgot-password", (req, res) => {
     });
   }
   if (otp === otpStore[email]) {
+    console.log("New password is :- "+otp);
+    
     delete otpStore[email];
     return res.status(200).json({
       msg: "OTP Verified and new password is : " + newPassword,
