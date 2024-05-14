@@ -1,6 +1,18 @@
 import express from "express";
+import { rateLimit } from 'express-rate-limit'
+
+const limiter = rateLimit({
+	windowMs: 5 * 60 * 1000, // 5 minutes
+	limit: 3, // Limit each IP to 100 requests per `window` (here, per 15 minutes).
+	standardHeaders: 'draft-7', // draft-6: `RateLimit-*` headers; draft-7: combined `RateLimit` header
+	legacyHeaders: false, // Disable the `X-RateLimit-*` headers.
+	// store: ... , // Redis, Memcached, etc. See below.
+  message:"Too many request. Try again after 5 minutes."
+})
 
 const app = express();
+// Apply the rate limiting middleware to all requests.
+app.use(limiter)
 const PORT = 3000;
 app.use(express.json());
 const otpStore: Record<string, string> = {};
