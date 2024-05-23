@@ -7,7 +7,7 @@ const limiter = rateLimit({
 	standardHeaders: 'draft-7', // draft-6: `RateLimit-*` headers; draft-7: combined `RateLimit` header
 	legacyHeaders: false, // Disable the `X-RateLimit-*` headers.
 	// store: ... , // Redis, Memcached, etc. See below.
-  message:"Too many requests. Try again after 5 minutes."
+  message:"Too many requests. Please try again after 5 minutes."
 })
 
 const app = express();
