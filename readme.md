@@ -1,1 +1,1 @@
-## Understanding Rate Limiting, DDOS, Captchas in a NodeJS App.
+## Understanding cocnepts of Rate Limiting, DDOS, Captchas in a NodeJS App.
