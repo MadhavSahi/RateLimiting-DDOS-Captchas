@@ -16,7 +16,7 @@ app.use(limiter)
 const PORT = 3000;
 app.use(express.json());
 const otpStore: Record<string, string> = {};
-app.post("/generate-otp", (req, res) => {
+app.post("/generate-otp", (req, res,next) => {
   const email = req.body.email;
   if (!email) {
     return res.status(400).json({
