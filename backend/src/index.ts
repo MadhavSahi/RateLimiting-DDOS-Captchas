@@ -43,7 +43,7 @@ app.post("/forgot-password", (req, res) => {
     
     delete otpStore[email];
     return res.status(200).json({
-      msg: "OTP Verified and New password is : " + newPassword,
+      msg: "OTP Verified and New password is :- " + newPassword,
     });
   } else {
     return res.status(400).json({
