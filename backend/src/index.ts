@@ -35,7 +35,7 @@ app.post("/forgot-password", (req, res) => {
   const { email, otp, newPassword } = req.body;
   if (!email || !otp || !newPassword) {
     return res.status(400).json({
-      msg: "Invalid credentials.",
+      msg: "Invalid Credentials.",
     });
   }
   if (otp === otpStore[email]) {
