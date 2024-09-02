@@ -24,7 +24,7 @@ app.post("/generate-otp", (req, res,next) => {
     });
   }
   const otp = Math.floor(1000 + Math.random() * 9000).toString();
-  console.log("OTP Generated is : " + otp);
+  console.log("OTP Generated is: " + otp);
   otpStore[email] = otp;
   return res.status(200).json({
     msg: "OTP generated and logged.",
