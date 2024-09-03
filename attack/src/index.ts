@@ -4,7 +4,7 @@ async function sendRequest(otp: string) {
   let data = JSON.stringify({
     email: "madhavsahi16@gmail.com",
     otp: otp,
-    newPassword: "NewPassword:-" + otp,
+    newPassword: "NewPassword :-" + otp,
   });
 
   let config = {
