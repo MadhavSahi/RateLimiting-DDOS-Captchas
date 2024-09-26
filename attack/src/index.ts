@@ -33,7 +33,7 @@ async function sendRequest(otp: string) {
     console.log("Worked for : " + otp);
     
   } catch (e) {
-    console.log("Not worked for : " + otp);
+    console.log("Not worked for: " + otp);
   }
 }
 
